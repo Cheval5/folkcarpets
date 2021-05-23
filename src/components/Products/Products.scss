@@ -1,11 +1,16 @@
 .products {
     display: flex;
     flex-direction: column;
-    &__heading {
-        font-size: 2.5rem;
-        color: grey;
-        font-weight: normal;
-    }
+    align-items: center;
+    // &__heading {
+    //     font-size: 2.5rem;
+    //     color: rgb(180, 179, 179);
+    //     font-weight: normal;
+    //     border: solid 1px rgb(218, 216, 216);
+    //     width: fit-content;
+    //     border-radius: 3px;
+    //     padding: 1rem 5rem;
+    // }
     &__title {
         color: grey;
     }
