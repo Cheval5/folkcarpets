@@ -15,9 +15,19 @@ class App extends Component {
   }
 
   filterProducts = (event) => {
-    this.setState({
-      category: event.target.value,
-    })
+    const category = event.target.value;
+    this.setState(
+      category.length > 0 ?
+      {
+        category: category,
+        products: data.products.filter(filteredProducts => filteredProducts.category === category)
+      }
+      :
+      {
+        category: category,
+        products: data.products
+      }
+    )
   }
 
   sortProducts = (event) => {

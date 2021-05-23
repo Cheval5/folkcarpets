@@ -18,7 +18,7 @@ class products extends Component {
                                     </div>
                                     <div className="products__card-detail">
                                         <p className="products__price">${product.price}</p>
-                                        <button className="products__cart-add">Add To Cart</button>
+                                        <button className="products__cart-add">Add to cart</button>
                                     </div>
                                 </div>
                             </li>

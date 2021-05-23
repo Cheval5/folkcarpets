@@ -9,7 +9,7 @@ class SortAndFilter extends Component {
                 <p className="sort-filter__count">{count}Rugs</p>
                 <div className="sort-filter__sort">
                     <p className="sort-filter__title">Sort </p>
-                    <select value= {sort} onChange= {sortProducts}>
+                    <select className="sort-filter__select" value= {sort} onChange= {sortProducts}>
                         <option value="default">Default</option>
                         <option value="highest">Highest</option>
                         <option value="lowest">Lowest</option>
@@ -17,11 +17,11 @@ class SortAndFilter extends Component {
                 </div>
                 <div className="sort-filter__filter">
                     <p className="sort-filter__title">Filter</p>
-                    <select value= {category} onChange= {filterProducts}>
-                        <option>All</option>
-                        <option value="highest">Vintage</option>
-                        <option value="lowest">Primitive</option>
-                        <option value="lowest">Boho</option>
+                    <select className="sort-filter__select" value= {category} onChange= {filterProducts}>
+                        <option value="">All</option>
+                        <option value="Vintage">Vintage</option>
+                        <option value="Primitive">Primitive</option>
+                        <option value="Boho">Boho</option>
                     </select>
                 </div>
             </div>
