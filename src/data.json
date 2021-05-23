@@ -1,7 +1,7 @@
 {
     "products" : [
         {
-            "id": "Afghan-1",
+            "id": 1,
             "title": "5' x 3' / 152.44 cm x 91.44 cm Old Afghan Tekke rug",
             "category": "Vintage",
             "image": "/images/tekke/tekke-main.jpg",
@@ -12,7 +12,7 @@
             "price": 500
         },
         {
-            "id": "Afghan-2",
+            "id": 2,
             "title": "6.5' x 4' /198.12 cm x 121.92 cm TURKISH, Southeast TURKISH rug",
             "category": "Boho",
             "image": "/images/turkishNomadic/nomadic-main.jpg",
@@ -23,7 +23,7 @@
             "price": 300
         },
         {
-            "id": "Afghan-3",
+            "id": 3,
             "title": "6' x 4' / 182.88 cm x 121.92 cm Old Afghan Tekke rug",
             "category": "Boho",
             "image": "/images/tekke-lo/tekke-lo-main.jpg",
@@ -34,7 +34,7 @@
             "price": 720
         },
         {
-            "id": "Afghan-4",
+            "id": 4,
             "title": "6.4' x 3.5' / 195.07 cm x 106.68 cm Caucasian Old rug",
             "category": "Primitive",
             "image": "/images/caucasian/caucasian-main.jpg",
@@ -45,7 +45,7 @@
             "price": 800
         },
         {
-            "id": "Afghan-5",
+            "id": 5,
             "title": "8' x 3.5' /243.84 cm x 106.68 cm Very Old Caucasian RUG,",
             "category": "Primitive",
             "image": "/images/old-caucasian/old-caucasian-main.jpg",
@@ -56,7 +56,7 @@
             "price": 1150
         },
         {
-            "id": "Afghan-6",
+            "id": 6,
             "title": "6.9' x 4.4' /210.312 cm x 134.112 cm Vintage Turkish rug",
             "category": "Vintage",
             "image": "/images/vintage-turkish/vintage-turkish-main.jpg",

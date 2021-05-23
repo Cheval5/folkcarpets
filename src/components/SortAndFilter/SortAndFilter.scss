@@ -1,0 +1,13 @@
+.sort-filter{
+    width: 30vw;
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: space-between;
+    &__sort {
+        display: flex;
+    }
+    &__filter {
+        display: flex;
+    }
+}
