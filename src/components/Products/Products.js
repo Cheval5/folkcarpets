@@ -5,8 +5,9 @@ class products extends Component {
     render() {
         const { products } = this.props
         return (
-            <>
-                <ul className='products'>
+            <div className='products'>
+                <h2 className='products__heading'>Rugs</h2>
+                <ul className='products__name'>
                     {products.map(product => {
                         return (
                             <li className='products__card' key={product._id}>
@@ -17,14 +18,14 @@ class products extends Component {
                                     </div>
                                     <div className="products__card-detail">
                                         <p className="products__price">${product.price}</p>
-                                        <button className="products__cart-add">Add To Cart</button>
+                                        <button className="products__cart-add">Add to cart</button>
                                     </div>
                                 </div>
                             </li>
                         )
                     })}
                 </ul>
-            </>
+            </div>
         );
     }
 }

@@ -1,0 +1,37 @@
+.sort-filter{
+    width: 30vw;
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    &__sort {
+        display: flex;
+    }
+    &__filter {
+        display: flex;
+    }
+    &__title {
+        margin: 0;
+        color: grey;
+        padding: 0 1rem;
+    }
+    &__select {
+        appearance: none;
+        background-color: transparent;
+        border: 1px solid grey;
+        border-radius: 99em;
+        padding: 0;
+        margin: 0;
+        width: 7rem;
+        height: 2rem;
+        padding: 0 0.5em;
+        outline: none;
+        color: grey;
+        background-color: transparent;
+        background-image: url('../../assets/logo/bxs-down-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1.5rem;
+    }
+}
