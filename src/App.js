@@ -4,14 +4,38 @@ import './App.scss';
 import data from './data.json';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
+import Cart from './components/Cart/Cart';
 class App extends Component {
   constructor(){
     super()
     this.state = {
       products: data.products,
+      cartItems: [],
       category: '',
       sort: '',
     }
+  }
+
+  addToCart = (product) => {
+    const cartItems = Array.from(this.state.cartItems);
+    let alreadyInCart = false;
+    cartItems.forEach(item => {
+      if(item.id === product.id) {
+        item.count ++;
+        alreadyInCart = true;
+      }
+    })
+    if (!alreadyInCart) {
+      cartItems.push ({...product, count:1})
+    }
+    this.setState({cartItems})
+  }
+
+  removeFromCart = (product) => {
+    const cartItems = Array.from(this.state.cartItems);
+    this.setState({
+      cartItems: cartItems.filter(item => item.id !== product.id)
+    })
   }
 
   filterProducts = (event) => {
@@ -29,6 +53,7 @@ class App extends Component {
       }
     )
   }
+
 
   sortProducts = (event) => {
     const sort = event.target.value
@@ -63,10 +88,14 @@ class App extends Component {
             <div className="grid-container__products">
               <Products 
                 products = {this.state.products}
+                addToCart = {this.addToCart}
               />
             </div>
             <div className="grid-container__cart">
-              Cart Items
+              <Cart
+                cartItems = {this.state.cartItems}
+                removeFromCart = {this.removeFromCart}
+              />
             </div>
           </div>
         </div>
