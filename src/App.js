@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Logo from './assets/logo/yellow-logo.png';
+import './App.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='grid-container'>
+      <div className='grid-container__head'>
+        <button className='grid-container__logo'><img className='grid-container__logo-pic'src={Logo} alt="Folk Carpets Logo" />Folk</button>
+        <p className='grid-container__name'>Carpets</p>
+      </div>
+      <div className='grid-container__main'> rug list</div>
+      <div className='grid-container__foot'>All right is reserved</div>
     </div>
   );
-}
+};
 
 export default App;
