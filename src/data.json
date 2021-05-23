@@ -1,0 +1,70 @@
+{
+    "products" : [
+        {
+            "id": "Afghan-1",
+            "title": "5' x 3' / 152.44 cm x 91.44 cm Old Afghan Tekke rug",
+            "category": "Vintage",
+            "image": "/images/tekke/tekke-main.jpg",
+            "imageOne": "/images/tekke/tekke-1.jpg",
+            "imageTwo": "/images/tekke/tekke-2.jpg",
+            "imageThree": "/images/tekke/tekke-3.jpg",
+            "description": "An outstanding, collector-level antique Oriental rug from the celebrated Old Afghan Tekke rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
+            "price": 500
+        },
+        {
+            "id": "Afghan-2",
+            "title": "6.5' x 4' /198.12 cm x 121.92 cm TURKISH, Southeast TURKISH rug",
+            "category": "Boho",
+            "image": "/images/turkishNomadic/nomadic-main.jpg",
+            "imageOne": "/images/turkishNomadic/nomadic-1.jpg",
+            "imageTwo": "/images/turkishNomadic/nomadic-2.jpg",
+            "imageThree": "/images/turkishNomadic/nomadic-3.jpg",
+            "description": "Collector-level antique Oriental rug from the celebrated South TURKISH tribal group, this antique TURKISH presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
+            "price": 300
+        },
+        {
+            "id": "Afghan-3",
+            "title": "6' x 4' / 182.88 cm x 121.92 cm Old Afghan Tekke rug",
+            "category": "Boho",
+            "image": "/images/tekke-lo/tekke-lo-main.jpg",
+            "imageOne": "/images/tekke-lo/tekke-lo-1.jpg",
+            "imageTwo": "/images/tekke-lo/tekke-lo-2.jpg",
+            "imageThree": "/images/tekke-lo/tekke-lo-3.jpg",
+            "description": "Oriental rug from the celebrated Old Afghan Tekke rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
+            "price": 720
+        },
+        {
+            "id": "Afghan-4",
+            "title": "6.4' x 3.5' / 195.07 cm x 106.68 cm Caucasian Old rug",
+            "category": "Primitive",
+            "image": "/images/caucasian/caucasian-main.jpg",
+            "imageOne": "/images/caucasian/caucasian-1.jpg",
+            "imageTwo": "/images/caucasian/caucasian-2.jpg",
+            "imageThree": "/images/caucasian/caucasian-3.jpg",
+            "description": "Old Caucasian rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
+            "price": 800
+        },
+        {
+            "id": "Afghan-5",
+            "title": "8' x 3.5' /243.84 cm x 106.68 cm Very Old Caucasian RUG,",
+            "category": "Primitive",
+            "image": "/images/old-caucasian/old-caucasian-main.jpg",
+            "imageOne": "/images/old-caucasian/old-caucasian-1.jpg",
+            "imageTwo": "/images/old-caucasian/old-caucasian-2.jpg",
+            "imageThree": "/images/old-caucasian/old-caucasian-3.jpg",
+            "description": "19th century Caucasian tribal rug, central medallion on madder field with foundrels decorated with birds and flowers, multibanded border with beautiful colours.",
+            "price": 1150
+        },
+        {
+            "id": "Afghan-6",
+            "title": "6.9' x 4.4' /210.312 cm x 134.112 cm Vintage Turkish rug",
+            "category": "Vintage",
+            "image": "/images/vintage-turkish/vintage-turkish-main.jpg",
+            "imageOne": "/images/vintage-turkish/vintage-turkish-1.jpg",
+            "imageTwo": "/images/vintage-turkish/vintage-turkish-2.jpg",
+            "imageThree": "/images/vintage-turkish/vintage-turkish-3.jpg",
+            "description": "Vintage Oriental rug from the celebrated Caucasian rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
+            "price": 400
+        }
+    ]
+}
