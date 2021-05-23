@@ -10,7 +10,6 @@
             "imageThree": "/images/tekke/tekke-3.jpg",
             "description": "An outstanding, collector-level antique Oriental rug from the celebrated Old Afghan Tekke rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
             "price": 500
-
         },
         {
             "id": "Afghan-2",
@@ -33,19 +32,17 @@
             "imageThree": "/images/tekke-lo/tekke-lo-3.jpg",
             "description": "Oriental rug from the celebrated Old Afghan Tekke rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
             "price": 720
-
         },
         {
             "id": "Afghan-4",
             "title": "6.4' x 3.5' / 195.07 cm x 106.68 cm Caucasian Old rug",
             "category": "Primitive",
-            "image": "/images/victorianAffairSet/victorianAffairSetMain.jpeg",
-            "imageOne": "/images/victorianAffairSet/victorianAffairSetOne.jpg",
-            "imageTwo": "/images/victorianAffairSet/victorianAffairSetTwo.jpg",
-            "imageThree": "/images/victorianAffairSet/victorianAffairSetThree.jpg",
+            "image": "/images/caucasian/caucasian-main.jpg",
+            "imageOne": "/images/caucasian/caucasian-1.jpg",
+            "imageTwo": "/images/caucasian/caucasian-2.jpg",
+            "imageThree": "/images/caucasian/caucasian-3.jpg",
             "description": "Old Caucasian rug that presents the unmistakable stamp of a master weaver who imbues a sense of movement throughout her design by rendering each detail with individual expression that is captured at the moment of weaving. This is a stunning piece that will for sure enhance the interior.",
             "price": 800
-
         },
         {
             "id": "Afghan-5",
@@ -57,7 +54,6 @@
             "imageThree": "/images/old-caucasian/old-caucasian-3.jpg",
             "description": "19th century Caucasian tribal rug, central medallion on madder field with foundrels decorated with birds and flowers, multibanded border with beautiful colours.",
             "price": 1150
-
         },
         {
             "id": "Afghan-6",
