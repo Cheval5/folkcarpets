@@ -1,0 +1,8 @@
+.slide-two {
+    &__details-image{
+        max-height: 25rem;
+        width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+}

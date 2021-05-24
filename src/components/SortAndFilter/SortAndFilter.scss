@@ -1,24 +1,37 @@
 .sort-filter{
-    width: 30vw;
     display: flex;
     padding: 1rem;
     margin: 1rem;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    width: fit-content;
+    flex-wrap: wrap;
     &__count {
         font-weight:300;
+        width: 10rem;
+        margin: .5rem 0;
+        text-align: right;
     }
     &__sort {
         display: flex;
+        justify-content: flex-end;
+        width: 20rem;
+        margin: .5rem 0;
+        padding-left: 5rem;
+        
     }
     &__filter {
         display: flex;
+        justify-content: flex-end;
+        width: 20rem;
+        margin: .5rem 0;
     }
     &__title {
         margin: 0;
         color: grey;
         padding: 0 1rem;
         font-weight:300;
+        
     }
     &__select {
         appearance: none;

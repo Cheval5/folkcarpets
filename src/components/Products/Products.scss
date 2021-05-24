@@ -1,7 +1,6 @@
 .products {
     display: flex;
     flex-direction: column;
-    align-items: center;
     // &__heading {
     //     font-size: 2.5rem;
     //     color: rgb(180, 179, 179);
@@ -26,7 +25,7 @@
     }
     &__card{
         flex: 0 1 29rem;
-        height: 42rem;
+        height: 40rem;
         padding: 1rem;
         margin: 1rem;
         border-radius: 5px;
@@ -40,9 +39,21 @@
         justify-content: space-between;
         height: 100%;
     }
+    &__card-link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__pic-container{
+        width: 25rem;
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
     &__pic {
-        max-width: 30rem;
-        max-height: 30rem;
+        max-width: 25rem;
+        max-height: 25rem;
     }
     &__card-detail {
         display: flex;
@@ -60,12 +71,12 @@
     &__cart-add {
         text-align: center;
         flex: 1;
-        border: 0.1rem solid rgb(236, 8, 8);
         border-radius: 3px;
         background-color: transparent;
-        color: rgb(236, 8, 8);
         padding: 1rem;
         cursor: pointer;
+        border: 0.1rem solid rgb(236, 8, 8);
+        color: rgb(236, 8, 8);
         &:hover {
             background-color: rgb(236, 8, 8);
             color: white;
