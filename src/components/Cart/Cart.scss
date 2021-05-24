@@ -26,6 +26,7 @@
     }
     &__right {
         padding: .5rem;
+        margin-right: 1.5rem;
     }
     &__bottom {
         display: flex;
@@ -52,10 +53,14 @@
             background-color: rgb(236, 8, 8);
             color: white;
         }
-        &__total{
-            display: flex;
-            justify-content: space-between;
-            margin: 0 1rem;
-        }
+    }
+    &__total{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+    &__calc {
+        color: grey;
     }
 }

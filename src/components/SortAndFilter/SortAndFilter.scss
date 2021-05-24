@@ -5,6 +5,9 @@
     margin: 1rem;
     justify-content: space-between;
     align-items: center;
+    &__count {
+        font-weight:300;
+    }
     &__sort {
         display: flex;
     }
@@ -15,11 +18,13 @@
         margin: 0;
         color: grey;
         padding: 0 1rem;
+        font-weight:300;
     }
     &__select {
         appearance: none;
         background-color: transparent;
         border: 1px solid grey;
+        font-weight:300;
         border-radius: 99em;
         padding: 0;
         margin: 0;
