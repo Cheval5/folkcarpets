@@ -13,6 +13,7 @@
     // }
     &__title {
         color: grey;
+        font-weight: 300;
     }
     &__name {
         display: flex;
@@ -53,6 +54,8 @@
         flex: 1;
         font-size: 2rem;
         color: #808080;
+        font-weight: 300;
+        
     }
     &__cart-add {
         text-align: center;
