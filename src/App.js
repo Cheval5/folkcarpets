@@ -5,6 +5,9 @@ import data from './data.json';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
 import Cart from './components/Cart/Cart';
+import store from './store';
+import { Provider } from 'react-redux';
+
 class App extends Component {
   constructor(){
     super()
@@ -76,36 +79,38 @@ class App extends Component {
 
   render() {
     return (
-      <div className='grid-container'>
-        <div className='grid-container__head'>
-          <button className='grid-container__logo'><img className='grid-container__logo-pic'src={Logo} alt="Folk Carpets Logo" />Folk <p className='grid-container__name'>Carpets</p></button>
-          <SortAndFilter 
-            count = {this.state.products.length}
-            sort = {this.state.sort}
-            category = {this.state.category}
-            sortProducts = {this.sortProducts}
-            filterProducts = {this.filterProducts}
-          />
-        </div>
-        <div className='grid-container__main'> 
-          <div className='grid-container__content'>
-            <div className="grid-container__products">
-              <Products 
-                products = {this.state.products}
-                addToCart = {this.addToCart}
-              />
-            </div>
-            <div className="grid-container__cart">
-              <Cart
-                cartItems = {this.state.cartItems}
-                removeFromCart = {this.removeFromCart}
-                createOrder = {this.createOrder}
-              />
+      <Provider store={store}>
+        <div className='grid-container'>
+          <div className='grid-container__head'>
+            <button className='grid-container__logo'><img className='grid-container__logo-pic'src={Logo} alt="Folk Carpets Logo" />Folk <p className='grid-container__name'>Carpets</p></button>
+            <SortAndFilter 
+              count = {this.state.products.length}
+              sort = {this.state.sort}
+              category = {this.state.category}
+              sortProducts = {this.sortProducts}
+              filterProducts = {this.filterProducts}
+            />
+          </div>
+          <div className='grid-container__main'> 
+            <div className='grid-container__content'>
+              <div className="grid-container__products">
+                <Products 
+                  products = {this.state.products}
+                  addToCart = {this.addToCart}
+                />
+              </div>
+              <div className="grid-container__cart">
+                <Cart
+                  cartItems = {this.state.cartItems}
+                  removeFromCart = {this.removeFromCart}
+                  createOrder = {this.createOrder}
+                />
+              </div>
             </div>
           </div>
+          <div className='grid-container__foot'>All right is reserved</div>
         </div>
-        <div className='grid-container__foot'>All right is reserved</div>
-      </div>
+      </Provider>
     )
   }
 };
