@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from './assets/logo/yellow-logo.png';
+import Logo from './assets/logo/new-logo.png';
 import './App.scss';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
@@ -13,7 +13,7 @@ class App extends Component {
       <Provider store={store}>
         <div className='grid-container'>
           <div className='grid-container__head'>
-            <button className='grid-container__logo'><img className='grid-container__logo-pic' src={Logo} alt="Folk Carpets Logo" />Folk <p className='grid-container__name'>Carpets</p></button>
+            <button className='grid-container__logo'><img className='grid-container__logo-pic' src={Logo} alt="Folk Carpets Logo" /></button>
             <SortAndFilter/>
           </div>
           <div className='grid-container__main'> 

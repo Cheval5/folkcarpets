@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import {connect} from 'react-redux';
 import {removeFromCart} from '../../actions/cartAction';
-// import {createOrder, clearOrder} from '../../actions/orderActions';
+import {createOrder, clearOrder} from '../../actions/orderActions';
 import './Cart.scss';
 
 class Cart extends Component {
@@ -38,13 +38,14 @@ class Cart extends Component {
             email: this.state.email,
             name: this.state.name,
             address: this.state.address,
-            cartItems: this.state.cartItems
+            cartItems: this.state.cartItems,
+            total: this.props.cartItems.reduce((a,c) => a + c.price * c.count,0)
         };
         this.props.createOrder(order);
     }
 
     render() {
-        const { cartItems, removeFromCart } = this.props
+        const { cartItems, removeFromCart, order } = this.props
         return (
             <div className="cart">
                 <div className="cart__main">
@@ -54,6 +55,7 @@ class Cart extends Component {
                         <div className="cart__head">You have {cartItems.length} item in the cart</div> :
                         <div className="cart__head">You have {cartItems.length} items in the cart</div>
                     }
+                    {/* {order && model } */}
                 </div>
                 <ul className="cart__items">
                     {cartItems.map(item => {
@@ -96,7 +98,8 @@ class Cart extends Component {
 }
 
 export default connect((state) =>({
+        order: state.order.order,
         cartItems: state.cart.cartItems
     }),
-        {removeFromCart}
+        {removeFromCart, createOrder, clearOrder}
     )(Cart);
