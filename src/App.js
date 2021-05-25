@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Logo from './assets/logo/yellow-logo.png';
 import './App.scss';
-import data from './data.json';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
 import Cart from './components/Cart/Cart';
@@ -12,10 +11,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      products: data.products,
       cartItems: [],
-      category: '',
-      sort: '',
     }
   }
 
@@ -41,38 +37,6 @@ class App extends Component {
     })
   }
 
-  filterProducts = (event) => {
-    const category = event.target.value;
-    this.setState(
-      category.length > 0 ?
-      {
-        category: category,
-        products: data.products.filter(filteredProducts => filteredProducts.category === category)
-      }
-      :
-      {
-        category: category,
-        products: data.products
-      }
-    )
-  }
-
-
-  sortProducts = (event) => {
-    const sort = event.target.value
-    this.setState({
-      sort: sort,
-      products: Array.from(this.state.products).sort((a,b) => {
-      if(sort === 'lowest') {
-        return a.price - b.price 
-      } else if(sort === 'highest'){
-        return b.price - a.price 
-      } else {
-        return a.id - b.id
-      }
-    })})
-  }
-
   createOrder = (order) => [
     alert('Need to save order for')
   ]
@@ -83,19 +47,12 @@ class App extends Component {
         <div className='grid-container'>
           <div className='grid-container__head'>
             <button className='grid-container__logo'><img className='grid-container__logo-pic'src={Logo} alt="Folk Carpets Logo" />Folk <p className='grid-container__name'>Carpets</p></button>
-            <SortAndFilter 
-              count = {this.state.products.length}
-              sort = {this.state.sort}
-              category = {this.state.category}
-              sortProducts = {this.sortProducts}
-              filterProducts = {this.filterProducts}
-            />
+            <SortAndFilter/>
           </div>
           <div className='grid-container__main'> 
             <div className='grid-container__content'>
               <div className="grid-container__products">
-                <Products 
-                  products = {this.state.products}
+                <Products
                   addToCart = {this.addToCart}
                 />
               </div>
