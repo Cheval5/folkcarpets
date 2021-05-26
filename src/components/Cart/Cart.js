@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import {connect} from 'react-redux';
 import {removeFromCart} from '../../actions/cartAction';
-// import {createOrder, clearOrder} from '../../actions/orderActions';
+import {createOrder, clearOrder} from '../../actions/orderActions';
+import OrderDetails from '../OrderDetails/OrderDetails';
 import './Cart.scss';
 
 class Cart extends Component {
@@ -29,7 +30,7 @@ class Cart extends Component {
     }
 
     handleAddressInput = (event) => {
-        this.setState({email: event.target.value})
+        this.setState({address: event.target.value})
     }
 
     createOrder = (event) => {
@@ -38,13 +39,18 @@ class Cart extends Component {
             email: this.state.email,
             name: this.state.name,
             address: this.state.address,
-            cartItems: this.state.cartItems
+            cartItems: this.props.cartItems,
+            total: this.props.cartItems.reduce((a,c) => a + c.price * c.count,0)
         };
         this.props.createOrder(order);
     }
 
+    closeWindow = () => {
+                this.props.clearOrder();
+            }
+
     render() {
-        const { cartItems, removeFromCart } = this.props
+        const { cartItems, removeFromCart, order } = this.props
         return (
             <div className="cart">
                 <div className="cart__main">
@@ -53,6 +59,12 @@ class Cart extends Component {
                         cartItems.length === 1 ? 
                         <div className="cart__head">You have {cartItems.length} item in the cart</div> :
                         <div className="cart__head">You have {cartItems.length} items in the cart</div>
+                    }
+                    {   order && 
+                        <OrderDetails
+                            order= {order}
+                            closeWindow={this.closeWindow}
+                        />
                     }
                 </div>
                 <ul className="cart__items">
@@ -96,7 +108,8 @@ class Cart extends Component {
 }
 
 export default connect((state) =>({
+        order: state.order.order,
         cartItems: state.cart.cartItems
     }),
-        {removeFromCart}
+        {removeFromCart, createOrder, clearOrder}
     )(Cart);
