@@ -3,6 +3,7 @@ import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import {connect} from 'react-redux';
 import {removeFromCart} from '../../actions/cartAction';
 import {createOrder, clearOrder} from '../../actions/orderActions';
+import OrderDetails from '../OrderDetails/OrderDetails';
 import './Cart.scss';
 
 class Cart extends Component {
@@ -29,7 +30,7 @@ class Cart extends Component {
     }
 
     handleAddressInput = (event) => {
-        this.setState({email: event.target.value})
+        this.setState({address: event.target.value})
     }
 
     createOrder = (event) => {
@@ -38,11 +39,15 @@ class Cart extends Component {
             email: this.state.email,
             name: this.state.name,
             address: this.state.address,
-            cartItems: this.state.cartItems,
+            cartItems: this.props.cartItems,
             total: this.props.cartItems.reduce((a,c) => a + c.price * c.count,0)
         };
         this.props.createOrder(order);
     }
+
+    closeWindow = () => {
+                this.props.clearOrder();
+            }
 
     render() {
         const { cartItems, removeFromCart, order } = this.props
@@ -55,7 +60,12 @@ class Cart extends Component {
                         <div className="cart__head">You have {cartItems.length} item in the cart</div> :
                         <div className="cart__head">You have {cartItems.length} items in the cart</div>
                     }
-                    {/* {order && model } */}
+                    {   order && 
+                        <OrderDetails
+                            order= {order}
+                            closeWindow={this.closeWindow}
+                        />
+                    }
                 </div>
                 <ul className="cart__items">
                     {cartItems.map(item => {

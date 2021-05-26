@@ -6,7 +6,7 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/folk-carpets-db", {
+mongoose.connect("mongodb://localhost/folkcarpets-db", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -44,7 +44,7 @@ app.delete("/api/products/:id", async(req, res) => {
 })
 
 const Order = mongoose.model(
-    "Order",
+    "order",
     new mongoose.Schema({
         id: {type: String, default: shortid.generate},
         email: String,
@@ -64,14 +64,14 @@ const Order = mongoose.model(
     )
 )
 
-app.post("/api/orders", async(req, res) => {
-    if(!req.body.name || !req.body.email || !req.body.address || !req.body.total || !req.body.cartItems) {
-        return res.send({ message: 'data is required'})
+app.post("/api/orders", async(req, res)=>{
+    if(!req.body.name || !req.body.email || !req.body.address || !req.body.total || !req.body.cartItems){
+        return res.send({ message:"Data is required." })
     }
     const order = await Order(req.body).save()
     res.send(order)
 })
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 app.listen(port, () => console.log(`server listening at ${port}`))
