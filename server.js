@@ -6,7 +6,11 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/folkcarpets-db", {
+app.use('/', express.static(__dirname + '/build'));
+app.get('/', (req, res)=> res.sendFile(__dirname + '/build/index.html'));
+
+mongoose.connect(
+    process.env.MONGODB_URL || "mongodb://localhost/folkcarpets-db", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -82,6 +86,6 @@ app.delete('/api/orders/:id', async(req,res) => {
     res.send(order);
 })
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`server listening at ${port}`))
