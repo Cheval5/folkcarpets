@@ -13,7 +13,7 @@ class Orders extends Component {
             <div>Orders</div>
             ) : (
         <div className="orders">
-            <h2>Orders</h2>
+            <h2 className="orders__head">Orders</h2>
             <table>
                 <thead>
                     <tr>
@@ -31,7 +31,7 @@ class Orders extends Component {
                     <tr className="orders__rows">
                         <td className="orders__cells">{order._id}</td>
                         <td className="orders__cells">{order.createdAt}</td>
-                        <td className="orders__cells"> {formatCurrency(order.total)}</td>
+                        <td className="orders__cells"> ${order.total}</td>
                         <td className="orders__cells">{order.name}</td>
                         <td className="orders__cells">{order.email}</td>
                         <td className="orders__cells">{order.address}</td>

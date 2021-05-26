@@ -12,6 +12,7 @@ class User extends Component {
                 <div className='grid-container__head'>
                     <Link to="/" className='grid-container__logo'><img className='grid-container__logo-pic' src={Logo} alt="Folk Carpets Logo" /></Link>
                     <SortAndFilter/>
+                    <Link to="/admin" className='Admin__title'>Admin</Link>
                 </div>
                 <div className='grid-container__main'> 
                     <div className='grid-container__content'>

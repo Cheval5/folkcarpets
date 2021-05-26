@@ -1,4 +1,4 @@
-.grid-container{
+.Admin{
     display: grid;
     grid-template-areas: 'head' 'main' 'foot';
     grid-template-rows: 9rem 1fr 5rem;
@@ -20,11 +20,6 @@
     &__logo-pic{
         width: 15rem;
     }
-    &__name{
-        font-size: 2.5rem;
-        font-weight: lighter;
-        color: grey;
-    }
     &__head{
         padding: 0 2rem;
         grid-area: 'head';
@@ -37,30 +32,6 @@
         position: sticky;
         top: 0;
     }
-    &__main{
-        grid-area: 'main';
-    }
-    &__foot{
-        grid-area: 'foot';
-        background-color: white;
-        color: grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-top: solid 1px rgb(218, 216, 216);
-    }
-    &__content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__products{
-        display: flex;
-        flex: 3 60rem;
-    }
-    &__cart{
-        display: flex;
-        flex: 1 20rem;
-    }
     &__title{
         text-decoration: none;
         &:visited{
@@ -68,4 +39,3 @@
         }
     }
 }
-
