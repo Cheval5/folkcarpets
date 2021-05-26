@@ -1,0 +1,14 @@
+.orders {
+    width: 100%;
+    padding: 10px;
+    line-height: 35px;
+    &__rows:nth-child(odd) {
+        background-color: #fada9e;
+    }
+    &__cells {
+        padding: 10px 20px;
+    }
+    &__header-cells {
+        text-align: left;
+    }
+}

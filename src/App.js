@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Logo from './assets/logo/new-logo.png';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Admin from './Screens/Admin';
+import HomeScreen from './Screens/User';
 import './App.scss';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
@@ -11,23 +13,13 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className='grid-container'>
-          <div className='grid-container__head'>
-            <button className='grid-container__logo'><img className='grid-container__logo-pic' src={Logo} alt="Folk Carpets Logo" /></button>
-            <SortAndFilter/>
+        <BrowserRouter>
+          <div className='grid-container'>
+            <Route path="/admin" component={Admin} />
+            <Route path="/" component={HomeScreen} exact />
+            <div className='grid-container__foot'>All right is reserved</div>
           </div>
-          <div className='grid-container__main'> 
-            <div className='grid-container__content'>
-              <div className="grid-container__products">
-                <Products/>
-              </div>
-              <div className="grid-container__cart">
-                <Cart/>
-              </div>
-            </div>
-          </div>
-          <div className='grid-container__foot'>All right is reserved</div>
-        </div>
+        </BrowserRouter>
       </Provider>
     )
   }
